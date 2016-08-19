@@ -1,0 +1,19 @@
+Package: Somya
+Title: Some Outstanding Magics You'd Appreciate (Somya)
+Description: This package contains simple, yet outstanding functions to facilitate the data science practices.
+Version: 0.0.1.9000
+Date: 2016-08-19
+Authors@R: person("Som", "Bohora", email="energeticsom@gmail.com", role=c("aut", "cre"))
+Author: Som Bohora [aut, cre]
+Maintainer: Som Bohora <energeticsom@gmail.com>
+URL: https://github.com/sbohora/Somya
+BugReports: https://github.com/sbohora/Somya/issues
+License: GPL-2
+LazyData: TRUE
+Depends:
+    R(>= 3.1.0)
+Imports:
+  dplyr
+Suggests:
+  testthat
+RoxygenNote: 5.0.1

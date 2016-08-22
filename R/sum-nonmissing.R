@@ -12,6 +12,7 @@
 #' @author Som Bohora
 #'
 #' @examples
+#' library(magrittr)
 #' iris[c(1,2,4), c(1,3,4)] <- NA
 #'   expected <- iris %>%
 #'     dplyr::rowwise() %>%  # Notice the use of rowwise here

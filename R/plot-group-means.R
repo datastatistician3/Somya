@@ -42,9 +42,9 @@ plot_group_means <- function(data, group1, group2 = NULL, group3=NULL, y){
      dplyr::group_by_(.dots = c(group1)
      ) %>%
      dplyr::summarize(
-                 group_means = mean(y_name, na.rm = TRUE),
-                 N           = n(),
-                 sd          = sd(y_name)) %>% 
+                   group_means = mean(y_name, na.rm = TRUE),
+                   N           = n(),
+                   sd          = sd(y_name)) %>% 
      dplyr::mutate(se = sd/sqrt(N),
                    constant = qnorm(0.975)*sd/se,
                    lower    = group_means - constant,
@@ -65,9 +65,9 @@ plot_group_means <- function(data, group1, group2 = NULL, group3=NULL, y){
     dplyr::group_by_(.dots = c(group1, group2)
     ) %>%
     dplyr::summarize(
-                group_means = mean(y_name, na.rm = TRUE),
-                N           = n(),
-                sd          = sd(y_name)) %>% 
+                  group_means = mean(y_name, na.rm = TRUE),
+                  N           = n(),
+                  sd          = sd(y_name)) %>% 
     dplyr::mutate(se = sd/sqrt(N),
                   constant = qnorm(0.975)*sd/se,
                   lower    = group_means - constant,
@@ -88,9 +88,9 @@ return(final_plot)
     dplyr::group_by_(.dots = c(group1, group2, group3)
     ) %>%
     dplyr::summarize(
-                group_means = mean(y_name, na.rm = TRUE),
-                N           = n(),
-                sd          = sd(y_name)) %>% 
+                  group_means = mean(y_name, na.rm = TRUE),
+                  N           = n(),
+                  sd          = sd(y_name)) %>% 
     dplyr::mutate(se = sd/sqrt(N),
                   constant = qnorm(0.975)*sd/se,
                   lower    = group_means - constant,

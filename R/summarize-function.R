@@ -1,3 +1,5 @@
+library(magrittr)
+library(dplyr)
 summarize_function <- function(ds, column){
 # ds %>%
   d <- ds[,column]

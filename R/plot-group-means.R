@@ -20,9 +20,10 @@
 #' @author Som Bohora
 #'
 #' @examples
-#' plot_group_means(data = diamonds, group1 = "color", group2 = "cut", y = "price")
+#' plot_group_means(data = ggplot2::diamonds, group1 = "color", group2 = "cut", y = "price")
 
 plot_group_means <- function(data, group1, group2 = NULL, group3=NULL, y){
+  library(magrittr)
   message("This function requires `magrittr` & `ggplot2` packages. Please, load them.")
   group1 <- group1
   group2 <- group2

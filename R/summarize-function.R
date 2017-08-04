@@ -1,5 +1,6 @@
-library(magrittr)
-library(dplyr)
+#' @name summarize_function
+#' @export
+
 summarize_function <- function(ds, column){
 # ds %>%
   d <- ds[,column]
@@ -18,12 +19,12 @@ summarize_function <- function(ds, column){
   dplyr::mutate(
     Percentage = paste0(round(n/sum(n)*100, 2), "%")
    ) %>%
-  dplyr::rename_(
-      "`County`"                         = "`county`"
-    , "`Engagement Status`"              = "`engaged_pretty`"
-    , "`Count`"                          = "`n`"
-    , "`Percentage`"                     = "`Percentage`"
-  ) %>%
+  # dplyr::rename_(
+  #     "`County`"                         = "`county`"
+  #   , "`Engagement Status`"              = "`engaged_pretty`"
+  #   , "`Count`"                          = "`n`"
+  #   , "`Percentage`"                     = "`Percentage`"
+  # ) %>%
   knitr::kable(
     align   = c("r"),
     format  = "markdown"

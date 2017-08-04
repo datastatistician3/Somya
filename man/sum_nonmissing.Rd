@@ -26,4 +26,3 @@ iris[c(1,2,4), c(1,3,4)] <- NA
 \author{
 Som Bohora
 }
-

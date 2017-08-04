@@ -24,9 +24,8 @@ A plot of averages by grouping variable/s
 Calculate averages by one, two or three grouping variables and plot means with confidence intervals aound means
 }
 \examples{
-# plot_group_means(data = diamonds, group1 = "color", group2 = "cut", y = "price")
+plot_group_means(data = ggplot2::diamonds, group1 = "color", group2 = "cut", y = "price")
 }
 \author{
 Som Bohora
 }
-

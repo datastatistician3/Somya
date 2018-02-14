@@ -3,9 +3,9 @@
 check_digit <- function(x){
 	if (x >= '0')
 	{
-	return(TRUE)
+	  return(TRUE)
 	} else {
-	return(FALSE)
+	  return(FALSE)
 	}
 }
  
@@ -51,7 +51,7 @@ evaluate_prefix <- function(expression){
 }
  
 #Driver code
-expr = "+ 9 * - 2 5 + 3 2 ]"
+expr = "+ 9 * - 2 5 + 3 2"
 unlist(strsplit(base::trimws(expr), " "))
 print(evaluate_prefix(expr))
 

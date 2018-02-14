@@ -3,14 +3,13 @@
 check_digit <- function(x){
 	if (x >= '0')
 	{
-		return(TRUE)
-	}	else {
-		return(FALSE)
+	return(TRUE)
+	} else {
+	return(FALSE)
 	}
 }
  
-evaluate_prefix <- function(expression)
-{
+evaluate_prefix <- function(expression){
     stack <- as.vector(c())
     split_expr <- unlist(strsplit(base::trimws(expression), " "))
     
@@ -21,7 +20,6 @@ evaluate_prefix <- function(expression)
   	}
  
     for (j in length(split_expr):1) {
- 
         #Push operand to stack
         #To convert expression[j] to digit subtract #'0' from expression[j].
         if (check_digit(split_expr[j])){
@@ -45,7 +43,7 @@ evaluate_prefix <- function(expression)
             } else if (split_expr[j] == "%%") {
               push(stack, (o1 %% o2))
             } else {
-                stop("Invalid operator, choose +, -, *, /, %%")
+              stop("Invalid operator, choose +, -, *, /, %%")
             } 
         }
     }

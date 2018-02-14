@@ -1,4 +1,4 @@
-#CPP program to evaluate a prefix expression.
+#R program to evaluate a prefix expression.
 
 check_digit <- function(x){
 	if (x >= '0')

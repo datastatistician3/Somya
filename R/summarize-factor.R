@@ -1,6 +1,6 @@
 summarize_factor <- function(ds, column){
-  d1 <- ds[,column]
-  d <- d1[complete.cases(d1),]
+  d1 <- ds[,column, drop=FALSE]
+  d <- d1 #[complete.cases(d1),]
   names_d <- names(d)
   d %>%
   dplyr::select_(.dots = names_d) %>%
@@ -18,3 +18,5 @@ summarize_factor <- function(ds, column){
     col.names = proper_case(names(.))
   )
 }
+
+summarize_factor(mtcars, c("am","vs"))

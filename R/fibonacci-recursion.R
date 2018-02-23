@@ -10,7 +10,7 @@
 #'   print(compute_fibonacci(i))
 #' }
 
-compute_fibonacci <- function(n) {
+compute_fibonacci <- function( n ) {
    if (n <= 1){
      return(n)
    } else {

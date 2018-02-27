@@ -8,14 +8,19 @@
 is_palindrome <- function(str) {
 
   s <- gsub("\\s", "", tolower(str))
+  
+  #Remove punctuation characters (! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [  ] ^ _ ` { | } ~)
+  s <- gsub("[[:punct:]]","", s,ignore.case = TRUE)
+  
   s <- substring(s, seq(1,nchar(s),1), seq(1,nchar(s),1))
 
-  #Check for any punctuation characters
-  invalid_chars <- grepl("[[:punct:]]", s, ignore.case = T)
-
-  if (sum(invalid_chars) > 0) {
-    stop("Please remove any punctuation characters.")
-  }
+  # #Check for any punctuation characters
+  # invalid_chars <- grepl("[[:punct:]]", s, ignore.case = T)
+  # 
+  # if (sum(invalid_chars) > 0) {
+  #   stop("Please remove any punctuation characters.")
+  # }
+  
   #Separate case for shortest strings.
   if (length(s) <= 1) {
     return(TRUE)
@@ -32,4 +37,4 @@ is_palindrome <- function(str) {
   }
 }
 
-is_palindrome("Was It A Rat I Saw.")
+is_palindrome("Was It A Rat I Saw?")

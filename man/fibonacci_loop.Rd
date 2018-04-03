@@ -17,7 +17,7 @@ This function returns the Fibonacci number at a given position using loop method
 }
 \examples{
 
-fibonacci_loop
+fibonacci_loop(3)
 }
 \author{
 Som Bohora

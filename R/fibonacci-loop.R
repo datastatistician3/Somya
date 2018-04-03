@@ -14,7 +14,7 @@
 #'
 #' @examples
 #' 
-#' fibonacci_loop
+#' fibonacci_loop(3)
 
 fibonacci_loop <- function( n ) {  
    if (n <= 2){

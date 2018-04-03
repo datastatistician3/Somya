@@ -1,4 +1,22 @@
- fibonacci_loop <- function( n ) {  
+#' @name fibonacci_loop
+#'
+#' @export
+#'
+#' @title This function returns the Fibonacci number at a given position
+#'
+#' @description This function returns the Fibonacci number at a given position using loop method
+#'
+#' @param n A position for which the Fibonacci number is desired 
+#'
+#' @return A Fibonacci number at a given position
+#'
+#' @author Som Bohora
+#'
+#' @examples
+#' 
+#' fibonacci_loop
+
+fibonacci_loop <- function( n ) {  
    if (n <= 2){
      return(1)
    } 
@@ -12,6 +30,4 @@
   }
    return(fnew)
  }
- 
- fibonacci_loop(3)
  

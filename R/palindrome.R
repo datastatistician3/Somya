@@ -1,9 +1,21 @@
-
-#' Tests whether a string or sentence is a palindrome. A palindrome
+#' @name is_palindrome
+#'
+#' @export
+#'
+#' @title This function checks if the given string is a palindrome
+#'
+#' @description Tests whether a string or sentence is a palindrome by removing special punctuation characters. A palindrome
 #' is equal to its reverse, for example "rotor" or "racecar".
-#' @param str a string
+#'
+#' @param str A string or full sentence 
+#'
 #' @return TRUE if s is a palindrome and FALSE otherwise
-
+#'
+#' @author Som Bohora
+#'
+#' @examples
+#' 
+#'is_palindrome("Was It A Rat I Saw?")
 
 is_palindrome <- function(str) {
 
@@ -20,7 +32,6 @@ is_palindrome <- function(str) {
   # if (sum(invalid_chars) > 0) {
   #   stop("Please remove any punctuation characters.")
   # }
-  
   #Separate case for shortest strings.
   if (length(s) <= 1) {
     return(TRUE)
@@ -36,5 +47,3 @@ is_palindrome <- function(str) {
     return(FALSE)
   }
 }
-
-is_palindrome("Was It A Rat I Saw?")

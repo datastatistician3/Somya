@@ -1,9 +1,18 @@
-#' @description Computes a Fibonacci number.
-#' @param n an integer
+#' @name compute_fibonacci
 #' 
-#' @return the nth Fibonacci number
+#' @export
+#'
+#' @title This function returns the Fibonacci number at a given position
+#'
+#' @description This function returns the Fibonacci number at a given position using recursion method
+#'
+#' @param n A position for which the Fibonacci number is desired 
+#'
+#' @return A Fibonacci number at a given position
+#'
+#' @author Som Bohora
 #' 
-#' @example 
+#' @examples 
 #' compute_fibonacci(5)
 #' n = 10
 #' for (i in 0:(n-1)) {

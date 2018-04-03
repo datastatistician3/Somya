@@ -1,5 +1,5 @@
 Package: Somya
-Title: Some Outstanding Magics You'd Appreciate (Somya)
+Title: Some outstanding magics you'd appreciate (Somya)
 Description: This package contains simple, yet outstanding functions to facilitate the data science practices.
 Version: 0.0.1.9000
 Date: 2016-08-19
@@ -15,7 +15,9 @@ Depends:
 Imports:
   dplyr,
   magrittr,
-  ggplot2
+  ggplot2,
+  Hmisc,
+  stringr
 Suggests:
   testthat
 RoxygenNote: 6.0.1

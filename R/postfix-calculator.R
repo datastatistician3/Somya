@@ -1,4 +1,5 @@
 #' @name calculate_postfix
+#' @rdname funs
 #' 
 #' @title This function calculates postfix expression
 #'
@@ -7,11 +8,11 @@
 #'
 #' @param input_string A string with space-delimited integer arithmetic expression in postfix notation.
 #' 
-#' @param operator A string with mathematical operators \code{/,-,+,*,%}
+#' @param operator A string with mathematical operators 
 #' 
-#' @param char This function checkd if the character value is \code{+, -, *, /.}
+#' @param char This function checkd if the character value is 
 #' 
-#' @param check_number chcks if input is a number
+#' @param number checks if input is a number
 #' @param x operand 1
 #' @param y operator
 #' @param z operand 2
@@ -25,9 +26,10 @@
 #' @examples
 #' 
 #' calculate_postfix("2 3 1 * + 9 - ")
+NULL
 
 # Check if the operators are valid
-#' @export
+#' @rdname funs
 check_valid_operators <- function(operator){
 	# only allow valid four operators
 	valid_chars = grepl("/|-|\\+|\\*|/|%", operator)
@@ -39,7 +41,7 @@ check_valid_operators <- function(operator){
 }
 
 # Function to check if the character value is +, -, *, /.
-#' @export
+#' @rdname funs
 check_operator <- function(char){
 	if (char == "+" | char == "-" | char == "%%" | char == "/" | char == "*" ){
 	  return(TRUE)
@@ -49,9 +51,9 @@ check_operator <- function(char){
 }
 
 # Function to check whethern character is digit inbetween 0 to 9 or not.
-#' @export
-check_digit <- function(check_number){
-	if (check_number >= '0')
+#' @rdname funs
+check_digit <- function(number){
+	if (number >= '0')
 	{
 		return(TRUE)
 	}	else {
@@ -60,7 +62,7 @@ check_digit <- function(check_number){
 }
 
 # Function to execute tasks
-#' @export
+#' @rdname funs
 perform_operation <- function(z, x, y){
   if (z == "+") {
     return(x + y)
@@ -78,6 +80,7 @@ perform_operation <- function(z, x, y){
 }
 
 # Push method
+#' @rdname funs
 #' @export
 push <- function(input_vector, values) {
   base::assign(as.character(substitute(input_vector)), c(input_vector, values), parent.frame())
@@ -85,6 +88,7 @@ push <- function(input_vector, values) {
   }
 
 # Pop method
+#' @rdname funs
 #' @export
 pop <- function(input_vector) {
   if(length(input_vector) == 0) {
@@ -95,11 +99,12 @@ pop <- function(input_vector) {
   return(pop_output)
 }
 
-# main calculate postfix function
+# main function to calculate postfix expression
+#' @rdname funs
 #' @export
 calculate_postfix <- function(input_string){
 
-  check_valid_operators(input_string = input_string)
+  check_valid_operators(operator = input_string)
 
 	store_vector <- as.integer(c())
 	s <- unlist(strsplit(base::trimws(input_string), " "))

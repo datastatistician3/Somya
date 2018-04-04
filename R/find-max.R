@@ -17,11 +17,11 @@
 #'find_max(c(2,3,200,5,6,7))
 
 find_max <- function(vector) {
-   max = vector[1]
+   max <- vector[1]
    
    for (i in 1:length(vector)) {
      if (vector[i] > max)
-       max = vector[i]
+       max <- vector[i]
    }
    return(max)
 }

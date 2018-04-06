@@ -2,11 +2,11 @@ y <- "hi"
 z <-  "hello"
 x <- "hi there hello som"
 
-remove_two_strings <- function(x, y, z){
-  s <- base::trimws(base::gsub(y, " ", x))
-  t <- base::trimws(base::gsub(z, " ", s))
+remove_two_strings <- function(original_str, first_string, second_string){
+  s <- base::trimws(base::gsub(first_string, " ", original_string))
+  t <- base::trimws(base::gsub(second_string, " ", s))
   u <- base::gsub("\\s+", " ", t)
   return(u)
 }
 
-remove_two_string(x, y,z)
+remove_two_strings(x, y, z)

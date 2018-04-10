@@ -14,19 +14,19 @@ remove_two_strings <- function(original_string, first_string, second_string){
 
 remove_two_strings(x, y, z)
 
-
-first_string <- c("hi")
-second_string <- c("hello")
-original_string <- c("hi hello there hello som", "hi som there hello")
+first_string <- c("hi", "hello")
+second_string <- c("hello","go")
+original_string <- c("hi hello there hello som", "hi som there hello go here")
 
 ds <- data.frame(original_string,first_string,second_string, stringsAsFactors = FALSE)
 
 # Works in vector
-remove_two_strings_vector <- function(original_string, first_string, second_string){
-  s <- base::trimws(str_replace(original_string, first_string, " "))
-  t <- base::trimws(str_replace(s, second_string, " "))
-  u <- base::trimws(str_replace(t, "\\s+", " "))
+remove_two_strings <- function(original_string, first_string, second_string){
+  s <- base::trimws(stringr::str_replace(original_string, first_string, " "))
+  t <- base::trimws(stringr::str_replace(s, second_string, " "))
+  u <- base::trimws(stringr::str_replace_all(t, "\\s+", " "))
   return(u)
 }
 
-remove_two_strings_vector(original_string = tolower(ds$original_string), first_string = ds$first_string,second_string = ds$second_string)
+remove_two_strings(original_string = tolower(ds$original_string), first_string = ds$first_string,second_string = ds$second_string)
+

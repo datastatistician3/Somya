@@ -9,10 +9,11 @@
 ^cran-comments\.md$
 ^CONDUCT.md$
 ^README.html$
-
 ^documentation-peek.pdf
 ^documentation-for-developers/
 ^playgrounds/
 ^unshared/
 ^utility/
 ^sandbox/
+^_pkgdown\.yml$
+^docs/

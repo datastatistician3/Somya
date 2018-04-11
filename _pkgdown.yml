@@ -1,0 +1,38 @@
+template:
+  params:
+    bootswatch: cerulean
+
+home:
+  strip_header: true
+
+reference:
+- title: Somya Functions
+  contents:
+  - calculate_postfix
+  - capitalize_each_word
+  - compute_fibonacci
+  - evaluate_prefix
+  - fibonacci_loop
+  - find_max
+  - find_mode
+  - insertion_sort
+  - is_palindrome
+  - make_proper_case
+  - pop
+  - push
+  - selection_sort
+  - sum_nonmissing
+
+navbar:
+  type: default
+  left:
+  - text: Articles
+    href: reference/index.html
+  - text: R Reference Functions
+    href: reference/index.html
+  - text: News
+    href: news/index.html
+  right:
+  - icon: fa-github fa-lg
+    href: https://github.com/sbohora/Somya
+

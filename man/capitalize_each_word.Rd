@@ -4,11 +4,13 @@
 \alias{capitalize_each_word}
 \title{This function makes first letter of each word in a string to uppercase}
 \usage{
-capitalize_each_word(x)
+capitalize_each_word(string, pattern = NULL)
 }
 \arguments{
-\item{x}{A string object or a vector of string objects with or without . or _ or space
+\item{string}{A string object or a vector of string objects with or without . or _ or space
 delimiters}
+
+\item{pattern}{A regular expression pattern to split the string with. Default delimiter is space.}
 }
 \value{
 A string with first letter of each word capitalized
@@ -18,9 +20,9 @@ This function capitalizes the first letter of each word in a string to uppercase
 }
 \examples{
 
-capitalize_each_word("make each letter in this string capitalized.")
-capitalize_each_word("make_each _etter_in_this_string_capitalized.")
-capitalize_each_word("make.each.letter.in.this.string.cpitalized.")
+capitalize_each_word("make each letter in this string capitalized.", pattern = NULL)
+capitalize_each_word("make_each _etter_in_this_string_capitalized.", pattern = "[_]")
+capitalize_each_word("make.each.letter.in.this.string.cpitalized.", pattern = "[.]")
 }
 \author{
 Som Bohora

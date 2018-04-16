@@ -14,10 +14,10 @@
 #' @examples
 #' library(magrittr)
 #' iris[c(1,2,4), c(1,3,4)] <- NA
-#'   expected <- iris %>%
-#'     dplyr::rowwise() %>%  # Notice the use of rowwise here
-#'     dplyr::mutate(Sum.Non.Missings = sum_nonmissing(
-#'       Sepal.Length, Sepal.Width, Petal.Length, Petal.Width))
+#' iris %>%
+#'   dplyr::rowwise() %>%  # Notice the use of rowwise here
+#'   dplyr::mutate(Sum.Non.Missings = sum_nonmissing(
+#'   Sepal.Length, Sepal.Width, Petal.Length, Petal.Width))
 
 sum_nonmissing <- function(...){
   dots  <- list(...)

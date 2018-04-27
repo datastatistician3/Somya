@@ -20,14 +20,14 @@ fibonacci_loop <- function( n ) {
    if (n <= 2){
      return(1)
    } 
-  fold = 1
-  fold2 = 1
+  f = 1
+  f2 = 1
     
   for (i in 3:n) {
-    fnew = fold + fold2
-    fold2 = fold
-    fold = fnew
+    result = f + f2
+    f2 = f
+    f = result
   }
-   return(fnew)
+   return(result)
  }
  

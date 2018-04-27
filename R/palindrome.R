@@ -32,7 +32,6 @@ is_palindrome <- function(str) {
   # if (sum(invalid_chars) > 0) {
   #   stop("Please remove any punctuation characters.")
   # }
-  #Separate case for shortest strings.
   if (length(s) <= 1) {
     return(TRUE)
   }

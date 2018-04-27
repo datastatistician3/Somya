@@ -18,8 +18,6 @@
 #'selection_sort(x)
 
 selection_sort <- function(input_vector){
-# Move boundary of unsorted sub array one by one 
-# Loop till length of the array-1
 	for (i in seq_len(length(input_vector)-1)) {
 	  minIndex = i
 	  for (j in (i + 1) : length(input_vector)) {
@@ -30,9 +28,9 @@ selection_sort <- function(input_vector){
 		temp = input_vector[minIndex]
 		input_vector[minIndex] = input_vector[i]
 		input_vector[i] = temp
-	} #End for loop
+	}
 return(input_vector)
-} #End function
+}
 
 
 

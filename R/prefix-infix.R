@@ -44,27 +44,24 @@ evaluate_prefix <- function(expression){
 
     for (j in length(split_expr):1) {
         #Push operand to stack
-        #To convert expression[j] to digit subtract #'0' from expression[j].
         if (check_digit(split_expr[j])){
             Somya::push(stack, split_expr[j])
         } else {
 
-            #Operator encountered
-            #Pop two elements from stack
-            o1 = as.numeric(Somya::pop(stack))
-            o2 = as.numeric(Somya::pop(stack))
+            #Operator encountered. Pop two elements from stack
+            value1 = as.numeric(Somya::pop(stack))
+            value2 = as.numeric(Somya::pop(stack))
 
-            #Use switch case to operate on o1 and o2 and perform o1 O o2.
             if (split_expr[j] == "+") {
-              Somya::push(stack, (o1 + o2))
+              Somya::push(stack, (value1 + value2))
             } else if (split_expr[j] == "-") {
-              Somya::push(stack, (o1 - o2))
+              Somya::push(stack, (value1 - value2))
             } else if (split_expr[j] == "*") {
-              Somya::push(stack, (o1 * o2))
+              Somya::push(stack, (value1 * value2))
             } else if (split_expr[j] == "/") {
-              Somya::push(stack, (o1 / o2))
+              Somya::push(stack, (value1 / value2))
             } else if (split_expr[j] == "%%") {
-              Somya::push(stack, (o1 %% o2))
+              Somya::push(stack, (value1 %% value2))
             } else {
               stop("Invalid operator, choose +, -, *, /, %%")
             }

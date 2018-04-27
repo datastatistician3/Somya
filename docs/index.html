@@ -29,9 +29,6 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="reference/index.html">Articles</a>
-</li>
-<li>
   <a href="reference/index.html">R Reference Functions</a>
 </li>
 <li>
@@ -60,7 +57,7 @@
 
 <div id="somya-some-outstanding-magics-youd-appreciate" class="section level1">
 
-<p>This package provides some outstanding magical tricks/functions which are very useful in research, statistics and data science.</p>
+<p>This package provides some outstanding magical tricks/functions which are very useful in research, statistics and data science. This is a special package for me since this is named under my daughter <code>Somya</code>.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -69,6 +66,40 @@
 <span class="co"># install.packages("devtools")</span>
 devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"sbohora/Somya"</span>)</code></pre></div>
 <p>If any bug is encountered, please raise an issue with a minimal reproducible example on <a href="https://github.com/sbohora/Somya/issues">GitHub</a>.</p>
+</div>
+<div id="few-examples" class="section level2">
+<h2 class="hasAnchor">
+<a href="#few-examples" class="anchor"></a>Few Examples</h2>
+<p><strong><code>capitalize_each_word</code></strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="reference/capitalize_each_word.html">capitalize_each_word</a></span>(<span class="st">"make each letter in this string capitalized."</span>, <span class="dt">pattern =</span> <span class="ot">NULL</span>)
+[<span class="dv">1</span>] <span class="st">"Make Each Letter In This String Capitalized."</span>
+<span class="kw"><a href="reference/capitalize_each_word.html">capitalize_each_word</a></span>(<span class="st">"make_each _etter_in_this_string_capitalized."</span>, <span class="dt">pattern =</span> <span class="st">"[_]"</span>)
+[<span class="dv">1</span>] <span class="st">"Make Each  Etter In This String Capitalized."</span>
+<span class="kw"><a href="reference/capitalize_each_word.html">capitalize_each_word</a></span>(<span class="st">"make.each.letter.in.this.string.cpitalized."</span>, <span class="dt">pattern =</span> <span class="st">"[.]"</span>)
+[<span class="dv">1</span>] <span class="st">"Make Each Letter In This String Cpitalized "</span></code></pre></div>
+<p><strong><code>compute_fibonacci</code></strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="reference/compute_fibonacci.html">compute_fibonacci</a></span>(<span class="dv">5</span>)
+[<span class="dv">1</span>] <span class="dv">5</span>
+<span class="op">&gt;</span><span class="st"> </span>n =<span class="st"> </span><span class="dv">10</span>
+<span class="op">&gt;</span><span class="st"> </span><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">0</span><span class="op">:</span>(n<span class="op">-</span><span class="dv">1</span>)) {
+<span class="op">+</span><span class="st">   </span><span class="kw">print</span>(<span class="kw"><a href="reference/compute_fibonacci.html">compute_fibonacci</a></span>(i))
+<span class="op">+</span><span class="st"> </span>}
+[<span class="dv">1</span>] <span class="dv">0</span>
+[<span class="dv">1</span>] <span class="dv">1</span>
+[<span class="dv">1</span>] <span class="dv">1</span>
+[<span class="dv">1</span>] <span class="dv">2</span>
+[<span class="dv">1</span>] <span class="dv">3</span>
+[<span class="dv">1</span>] <span class="dv">5</span>
+[<span class="dv">1</span>] <span class="dv">8</span>
+[<span class="dv">1</span>] <span class="dv">13</span>
+[<span class="dv">1</span>] <span class="dv">21</span>
+[<span class="dv">1</span>] <span class="dv">34</span></code></pre></div>
+<p><strong><code>is_palindrome</code></strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="reference/is_palindrome.html">is_palindrome</a></span>(<span class="st">"Was It A Rat I Saw?"</span>)
+[<span class="dv">1</span>] <span class="ot">TRUE</span></code></pre></div>
+<p><strong><code>calculate_postfix</code></strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">calculate_postfix</span>(<span class="st">"2 3 1 * + 9 - "</span>)
+[<span class="dv">1</span>] <span class="st">"The result is: -4"</span></code></pre></div>
 </div>
 </div>
 

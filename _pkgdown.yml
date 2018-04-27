@@ -26,8 +26,8 @@ reference:
 navbar:
   type: default
   left:
-  - text: Articles
-    href: reference/index.html
+  #- text: Articles
+    #href: reference/index.html
   - text: R Reference Functions
     href: reference/index.html
   - text: News

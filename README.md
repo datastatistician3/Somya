@@ -1,8 +1,8 @@
 [![Build Status](https://travis-ci.com/sbohora/Somya.svg?token=shyYTzvvbsLRHsRAWXTg)](https://travis-ci.com/sbohora/Somya)
 
 ## Introduction
-### Somya: Some outstanding magics you'd appreciate
-This package provides some outstanding magical tricks/functions which are very useful in research, statistics and data science. This is a special package for me since this is named under my daughter `Somya`.
+## Somya: Some outstanding magics you'd appreciate
+This package provides some outstanding magical tricks/functions which are very useful in research, statistics and data science. This package has been named under my daughter `Somya`.
 
 ## Installation
 

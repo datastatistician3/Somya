@@ -26,6 +26,6 @@ format_model_result_glm_lm <- function(x){
      d %>%
       knitr::kable()
   } else {
-    print("Model class needs to be either lm or glm.")
+    print("Model class should be either lm or glm.")
   }
 }

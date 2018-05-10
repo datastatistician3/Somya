@@ -104,12 +104,21 @@ Somya<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Somya<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/Somya/topics/is_palindrome">is_palindrome</a></span>(<span class="st">"Was It A Rat I Saw?"</span>)
 [<span class="dv">1</span>] <span class="ot">TRUE</span></code></pre></div>
 <p><strong><code>calculate_postfix</code></strong></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Somya<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/Somya/topics/funs">calculate_postfix</a></span>(<span class="st">"2 3 1 * + 9 - "</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Somya<span class="op">::</span><span class="kw">calculate_postfix</span>(<span class="st">"2 3 1 * + 9 - "</span>)
 [<span class="dv">1</span>] <span class="st">"The result is: -4"</span></code></pre></div>
 <p><strong><code>evaluate_prefix</code></strong></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">expr &lt;-<span class="st"> "+ 9 * - 2 5 + 3 2"</span>
-Somya<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/Somya/topics/funs">evaluate_prefix</a></span>(expr)
+Somya<span class="op">::</span><span class="kw">evaluate_prefix</span>(expr)
 [<span class="dv">1</span>] <span class="st">"The result is: -6"</span></code></pre></div>
+<p><strong><code>split_rows_to_columns</code></strong></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Somya<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/Somya/topics/split_rows_to_columns">split_rows_to_columns</a></span>(mtcars<span class="op">$</span>mpg, <span class="dt">number_rows =</span> <span class="dv">5</span>, <span class="dt">col_name_prefix =</span> <span class="st">"ID List"</span>)
+
+  ID List <span class="dv">1</span> ID List <span class="dv">2</span> ID List <span class="dv">3</span> ID List <span class="dv">4</span> ID List <span class="dv">5</span> ID List <span class="dv">6</span> ID List <span class="dv">7</span>
+<span class="dv">1</span>      <span class="fl">21.0</span>      <span class="fl">18.1</span>      <span class="fl">17.8</span>      <span class="fl">10.4</span>      <span class="fl">21.5</span>      <span class="fl">27.3</span>      <span class="fl">15.0</span>
+<span class="dv">2</span>      <span class="fl">21.0</span>      <span class="fl">14.3</span>      <span class="fl">16.4</span>      <span class="fl">14.7</span>      <span class="fl">15.5</span>      <span class="fl">26.0</span>      <span class="fl">21.4</span>
+<span class="dv">3</span>      <span class="fl">22.8</span>      <span class="fl">24.4</span>      <span class="fl">17.3</span>      <span class="fl">32.4</span>      <span class="fl">15.2</span>      <span class="fl">30.4</span>        <span class="ot">NA</span>
+<span class="dv">4</span>      <span class="fl">21.4</span>      <span class="fl">22.8</span>      <span class="fl">15.2</span>      <span class="fl">30.4</span>      <span class="fl">13.3</span>      <span class="fl">15.8</span>        <span class="ot">NA</span>
+<span class="dv">5</span>      <span class="fl">18.7</span>      <span class="fl">19.2</span>      <span class="fl">10.4</span>      <span class="fl">33.9</span>      <span class="fl">19.2</span>      <span class="fl">19.7</span>        <span class="ot">NA</span></code></pre></div>
 </div>
 
   </div>

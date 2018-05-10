@@ -69,3 +69,16 @@ expr <- "+ 9 * - 2 5 + 3 2"
 Somya::evaluate_prefix(expr)
 [1] "The result is: -6"
 ```
+
+**`split_rows_to_columns`**
+
+```r
+Somya::split_rows_to_columns(mtcars$mpg, number_rows = 5, col_name_prefix = "ID List")
+
+  ID List 1 ID List 2 ID List 3 ID List 4 ID List 5 ID List 6 ID List 7
+1      21.0      18.1      17.8      10.4      21.5      27.3      15.0
+2      21.0      14.3      16.4      14.7      15.5      26.0      21.4
+3      22.8      24.4      17.3      32.4      15.2      30.4        NA
+4      21.4      22.8      15.2      30.4      13.3      15.8        NA
+5      18.7      19.2      10.4      33.9      19.2      19.7        NA
+```

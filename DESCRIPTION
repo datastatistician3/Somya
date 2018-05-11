@@ -16,10 +16,12 @@ Imports:
   dplyr,
   magrittr,
   ggplot2,
-  Hmisc,
   stringr,
   knitr,
-  lazyeval
+  lazyeval,
+  Hmisc,
+  readxl,
+  stats
 Suggests:
   testthat
 RoxygenNote: 6.0.1.9000

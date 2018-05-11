@@ -10,7 +10,7 @@ make_proper_case <- function (string) {
 
 format_model_result_glm_lm <- function(x){
   if (class(x)[1] == "lm") {
-    cc <- confint(x)
+    cc <- stats::confint(x)
     d <- cbind.data.frame(summary(x)$coef, exp(summary(x)$coef[,1]), exp(cc))
     colnames(d) <- make_proper_case(c('$\\hat{\\beta}$', "SE($\\hat{\\beta}$)", "z", "p", "exp($\\hat{\\beta}$)", "95%CI (lower)", "95%CI (upper)"))
     rownames(d) <- make_proper_case(rownames(d))

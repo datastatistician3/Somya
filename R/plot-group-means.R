@@ -66,7 +66,7 @@ plot_group_means <- function(data, group1, group2 = NULL, group3 = NULL, outcome
                    N           = ~n(),
                    sd          = lazyeval::interp(~round(sd(v, na.rm = TRUE),2), v = as.name(y))) %>% 
      dplyr::mutate(se = sd/sqrt(N),
-                   constant = qnorm(0.975)*sd/se,
+                   constant = stats::qnorm(0.975)*stats::sd/se,
                    lower    = group_means - constant,
                    upper    = group_means + constant) %>% as.data.frame()
 
@@ -94,7 +94,7 @@ plot_group_means <- function(data, group1, group2 = NULL, group3 = NULL, outcome
                    N           = ~n(),
                    sd          = lazyeval::interp(~round(sd(v, na.rm = TRUE),2), v = as.name(y))) %>% 
      dplyr::mutate(se = sd/sqrt(N),
-                  constant = qnorm(0.975)*sd/se,
+                  constant = stats::qnorm(0.975)*stats::sd/se,
                   lower    = group_means - constant,
                   upper    = group_means + constant) %>% as.data.frame()
 
@@ -122,7 +122,7 @@ plot_group_means <- function(data, group1, group2 = NULL, group3 = NULL, outcome
                    N           = ~n(),
                    sd          = lazyeval::interp(~round(sd(v, na.rm = TRUE),2), v = as.name(y))) %>% 
     dplyr::mutate(se = sd/sqrt(N),
-                  constant = qnorm(0.975)*sd/se,
+                  constant = stats::qnorm(0.975)*stats::sd/se,
                   lower    = group_means - constant,
                   upper    = group_means + constant) %>% as.data.frame()
 
@@ -130,7 +130,7 @@ plot_group_means <- function(data, group1, group2 = NULL, group3 = NULL, outcome
    final_plot <- ggplot(d_final, aes_string(x=group1, y=quote(group_means), colour=group2, group=group2)) +
      geom_errorbar(aes(ymin=lower, ymax=upper), colour="black", width=.1, position=pd) +
      geom_line(position=pd) + 
-     facet_wrap(as.formula(sprintf('~%s', group3))) +
+     facet_wrap(stats::as.formula(sprintf('~%s', group3))) +
      scale_colour_brewer(palette = "Set1") +
      geom_point(position=pd, size=3) +
      theme_bw() +

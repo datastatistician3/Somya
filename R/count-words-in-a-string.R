@@ -1,5 +1,5 @@
 
-count_string_words <- function(string){
+count_words_in_string <- function(string){
   counts = list()
   s = unlist(stringr::str_split(string,pattern = " "))
   for (word in s) {
@@ -12,5 +12,5 @@ count_string_words <- function(string){
   return(unlist(counts))
 }
 
-string = "This is a string. This is a a word."
-count_string_words(string = string)
+string = "This is a string. This is a a word. hora?"
+count_words_in_string(string = string)

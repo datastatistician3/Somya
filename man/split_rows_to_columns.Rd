@@ -22,6 +22,7 @@ This function takes a vector and truns it into a data frame with multiple column
 \examples{
 
 split_rows_to_columns(mtcars$mpg, number_rows = 7, col_name_prefix = "ID List")
+split_rows_to_columns(mtcars$mpg, number_rows = 1, col_name_prefix = "ID List")
 }
 \author{
 Som Bohora

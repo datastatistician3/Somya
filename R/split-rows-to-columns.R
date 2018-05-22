@@ -19,9 +19,14 @@
 #' @examples
 #' 
 #'split_rows_to_columns(mtcars$mpg, number_rows = 7, col_name_prefix = "ID List")
+#'split_rows_to_columns(mtcars$mpg, number_rows = 1, col_name_prefix = "ID List")
 
 split_rows_to_columns <- function(vector, number_rows, col_name_prefix = "name"){
-  col_names <- c(base::paste0(col_name_prefix, " ", base::seq_len(base::ceiling(length(vector)/number_rows))))
+  if (number_rows == 1L) {
+      col_names <- c(base::paste0(col_name_prefix, " 1"))
+  } else{
+      col_names <- c(base::paste0(col_name_prefix, " ", base::seq_len(base::ceiling(length(vector)/number_rows))))
+  }
   seq_vector <- base::seq_along(vector)
   split_vector <- base::split(vector, base::ceiling(seq_vector/number_rows))
   length_each_list <- base::sapply(split_vector, base::length)

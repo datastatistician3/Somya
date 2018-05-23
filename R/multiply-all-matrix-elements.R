@@ -54,3 +54,24 @@ column_product <- function(x){
   }
   return(r)
 }
+
+
+display_second_largest_value <- function(single_column){
+  sorted_col <- single_column[order(single_column,decreasing = T)]
+  second_largest <- sorted_col[2]
+  return(second_largest)
+}
+
+
+l <- list()
+second_largest_all_columns <- function(df){
+  # d <- sapply(df, function(x) display_second_largest_value(x))
+  for (i in seq_len(ncol(df))) {
+    l[i] <- (display_second_largest_value(df[,i]))
+  }
+  return(unlist(l))
+}
+
+display_second_largest_value(mtcars$mpg)
+
+second_largest_all_columns(df = mtcars)

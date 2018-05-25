@@ -23,6 +23,7 @@ reference:
   - selection_sort
   - sum_nonmissing
   - split_rows_to_columns
+  - count_words_in_string
 
 navbar:
   type: default

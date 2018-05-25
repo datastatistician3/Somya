@@ -19,7 +19,7 @@
 #' 
 #'capitalize_each_word("make each letter in this string capitalized.", pattern = NULL)
 #'capitalize_each_word("make_each _etter_in_this_string_capitalized.", pattern = "[_]")
-#'capitalize_each_word("make.each.letter.in.this.string.cpitalized.", pattern = "[.]")
+#'capitalize_each_word("make.each.letter.in.this.string.capitalized.", pattern = "[.]")
 
 capitalize_each_word <- function(string, pattern = NULL){
   if (!is.null(pattern)) {

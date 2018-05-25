@@ -22,7 +22,7 @@ This function capitalizes the first letter of each word in a string to uppercase
 
 capitalize_each_word("make each letter in this string capitalized.", pattern = NULL)
 capitalize_each_word("make_each _etter_in_this_string_capitalized.", pattern = "[_]")
-capitalize_each_word("make.each.letter.in.this.string.cpitalized.", pattern = "[.]")
+capitalize_each_word("make.each.letter.in.this.string.capitalized.", pattern = "[.]")
 }
 \author{
 Som Bohora

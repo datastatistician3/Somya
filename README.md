@@ -24,8 +24,8 @@ Somya::capitalize_each_word("make each letter in this string capitalized.", patt
 [1] "Make Each Letter In This String Capitalized."
 Somya::capitalize_each_word("make_each _etter_in_this_string_capitalized.", pattern = "[_]")
 [1] "Make Each  Etter In This String Capitalized."
-Somya::capitalize_each_word("make.each.letter.in.this.string.cpitalized.", pattern = "[.]")
-[1] "Make Each Letter In This String Cpitalized "
+Somya::capitalize_each_word("make.each.letter.in.this.string.capitalized.", pattern = "[.]")
+[1] "Make Each Letter In This String Capitalized "
 ```
 
 **`compute_fibonacci`**
@@ -81,4 +81,13 @@ Somya::split_rows_to_columns(mtcars$mpg, number_rows = 5, col_name_prefix = "ID 
 3      22.8      24.4      17.3      32.4      15.2      30.4        NA
 4      21.4      22.8      15.2      30.4      13.3      15.8        NA
 5      18.7      19.2      10.4      33.9      19.2      19.7        NA
+```
+
+**`count_words_in_string`**
+
+```r
+string = "This is a string. This is a a word. hora?"
+Somya::count_words_in_string(string = string, pattern = "[ ]", remove_punctuation = TRUE)
+  This     is      a string   word   hora 
+     2      2      3      1      1      1 
 ```

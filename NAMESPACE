@@ -3,6 +3,7 @@
 export(calculate_postfix)
 export(capitalize_each_word)
 export(compute_fibonacci)
+export(count_words_in_string)
 export(evaluate_prefix)
 export(fibonacci_loop)
 export(find_max)

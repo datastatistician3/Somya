@@ -75,3 +75,10 @@ second_largest_all_columns <- function(df){
 display_second_largest_value(mtcars$mpg)
 
 second_largest_all_columns(df = mtcars)
+
+
+find_any_largest_value <- function(df, which_value = 2){
+  return(sapply(df, function(x) x[order(x,decreasing = T)][which_value]))
+}
+
+find_any_largest_value(mtcars)

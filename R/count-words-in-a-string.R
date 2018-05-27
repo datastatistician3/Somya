@@ -22,15 +22,15 @@
 #'string = "This is a string. This is a a word. hora?"
 #'count_words_in_string(string = string, pattern = "[ ]", remove_punctuation = TRUE)
 
-count_words_in_string <- function(string, pattern = "[.]", remove_punctuation = FALSE){
+count_words_in_string <- function(string, pattern = "[ ]", remove_punctuation = FALSE){
   counts = list()
   
   if (remove_punctuation) {
     #Remove punctuation characters (! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [  ] ^ _ ` { | } ~)
     s <- gsub("[[:punct:]]","", string,ignore.case = TRUE)
-    s = unlist(stringr::str_split(s,pattern = pattern))
+    s <- unlist(stringr::str_split(s,pattern = pattern))
   } else{
-    s = unlist(stringr::str_split(string,pattern = pattern))
+    s <- unlist(stringr::str_split(string, pattern = pattern))
   }
   for (word in s) {
     if (word %in% names(counts)) { # names(counts) is important

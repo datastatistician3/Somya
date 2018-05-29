@@ -4,7 +4,7 @@
 \alias{count_words_in_string}
 \title{This function count the number of words in given string}
 \usage{
-count_words_in_string(string, pattern = "[.]", remove_punctuation = FALSE)
+count_words_in_string(string, pattern = "[ ]", remove_punctuation = FALSE)
 }
 \arguments{
 \item{string}{A text or paragraph}

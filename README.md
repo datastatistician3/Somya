@@ -91,3 +91,10 @@ Somya::count_words_in_string(string = string, pattern = "[ ]", remove_punctuatio
   This     is      a string   word   hora 
      2      2      3      1      1      1 
 ```
+
+**`swap_case`**
+```r
+s <- "thTs Is a 'R Case Swap Function 2'."
+swap_case(s)
+"THtS iS A 'r cASE sWAP fUNCTION 2'."
+```

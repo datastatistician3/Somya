@@ -24,6 +24,7 @@ reference:
   - sum_nonmissing
   - split_rows_to_columns
   - count_words_in_string
+  - swap_case
 
 navbar:
   type: default

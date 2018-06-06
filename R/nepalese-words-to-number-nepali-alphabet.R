@@ -153,5 +153,5 @@ nepalese_words_to_number <- function(x) {
   }
 }
 
-x = "tin करोड़ dui"
-nepalese_words_to_number(x)
+# x = "tin करोड़ dui"
+# nepalese_words_to_number(x)

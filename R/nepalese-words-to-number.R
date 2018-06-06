@@ -152,6 +152,6 @@ nepalese_words_to_number <- function(x) {
     return(as.integer(eval(parse(text = x))))
   }
 }
-
-x = "ek arba tin saya paanch"
-nepalese_words_to_number(x)
+# 
+# x = "ek arba tin saya paanch"
+# nepalese_words_to_number(x)

@@ -1,3 +1,31 @@
+#' @name nepalese_words_to_number
+#'
+#' @export
+#'
+#' @title This function allows you to translate to integer numerical words spelled in Nepali.
+#'
+#' @description This function allows you to translate to integer numerical words spelled in Nepali.
+#' Text must be previously cleaned & removed extraneous words or symbols. Below is the list of nepalese
+#' words used in this function;
+#' 
+#'  \code{"aath", "arba", "athara",
+#' "athchaalees", "aththais", "athtis", "baais", "barha", "battis", "bayalees", "bis", "chalees", "char",
+#' "chaubis", "chaudha", "chauntis", "chawaalees", "chha", "chhabbis", "chhattis", "chhayaalees", "das", 
+#' "dui", "eghaara", "ek", "ekchalees", "ekkais", "ekkattis", "hajaar", "karod", "kharaba", "lakh", "nau", 
+#' "nil", "paanch", "pachas", "pachchis", "padhna", "paintis", "paitaalees", "pandhra", "sacchaalees", 
+#' "saitis", "sat", "satra", "sattais", "saya", "shankha", "soonya", "sorha", "teis", "terha", "tettis",
+#' "tin", "tis", "triyalees", "unanchas", "unantis", "unnais", "unnanchaalis"}
+#'
+#' @param x x is an input string 
+#'
+#' @return An integer value
+#'
+#' @author Som Bohora
+#'
+#' @examples
+#' 
+#'x = "ek karod paanch hajaar paanch saya paanch"  # 10005505
+#'nepalese_words_to_number(x)
 
 nepalese_words_to_number <- function(x) { 
   x <- gsub("soonya",             "+0" , x , ignore.case = TRUE)     
@@ -22,13 +50,13 @@ nepalese_words_to_number <- function(x) {
   x <- gsub("unnais",            "+19" , x , ignore.case = TRUE)     
   x <- gsub("bis",               "+20" , x , ignore.case = TRUE)     
   x <- gsub("ekkais",            "+21" , x , ignore.case = TRUE)     
-  x <- gsub("baais",              "+22" , x , ignore.case = TRUE)     
+  x <- gsub("baais",             "+22" , x , ignore.case = TRUE)     
   x <- gsub("teis",              "+23" , x , ignore.case = TRUE)     
   x <- gsub("chaubis",           "+24" , x , ignore.case = TRUE)     
-  x <- gsub("pachchis",           "+25" , x , ignore.case = TRUE)     
-  x <- gsub("chhabbis",           "+26" , x , ignore.case = TRUE)     
+  x <- gsub("pachchis",          "+25" , x , ignore.case = TRUE)     
+  x <- gsub("chhabbis",          "+26" , x , ignore.case = TRUE)     
   x <- gsub("sattais",           "+27" , x , ignore.case = TRUE)     
-  x <- gsub("aththais",           "+28" , x , ignore.case = TRUE)     
+  x <- gsub("aththais",          "+28" , x , ignore.case = TRUE)     
   x <- gsub("unantis",           "+29" , x , ignore.case = TRUE)     
   x <- gsub("tis",               "+30" , x , ignore.case = TRUE)     
   x <- gsub("ekkattis",          "+31" , x , ignore.case = TRUE)     
@@ -39,14 +67,14 @@ nepalese_words_to_number <- function(x) {
   x <- gsub("chhattis",          "+36" , x , ignore.case = TRUE)     
   x <- gsub("saitis",            "+37" , x , ignore.case = TRUE)     
   x <- gsub("athtis",            "+38" , x , ignore.case = TRUE)     
-  x <- gsub("unnanchaalis",       "+39" , x , ignore.case = TRUE)     
+  x <- gsub("unnanchaalis",      "+39" , x , ignore.case = TRUE)     
   x <- gsub("chalees",           "+40" , x , ignore.case = TRUE)     
   x <- gsub("ekchalees",         "+41" , x , ignore.case = TRUE)     
   x <- gsub("bayalees",          "+42" , x , ignore.case = TRUE)     
   x <- gsub("triyalees",         "+43" , x , ignore.case = TRUE)     
   x <- gsub("chawaalees",        "+44" , x , ignore.case = TRUE)     
   x <- gsub("paitaalees",        "+45" , x , ignore.case = TRUE)     
-  x <- gsub("chhayaalees",        "+46" , x , ignore.case = TRUE)     
+  x <- gsub("chhayaalees",       "+46" , x , ignore.case = TRUE)     
   x <- gsub("sacchaalees",       "+47" , x , ignore.case = TRUE)     
   x <- gsub("athchaalees",       "+48" , x , ignore.case = TRUE)     
   x <- gsub("unanchas",          "+49" , x , ignore.case = TRUE)     
@@ -129,9 +157,9 @@ nepalese_words_to_number <- function(x) {
   #  x <- gsub("nabbe hajaar",   ")*(90000)+(0", x , ignore.case = TRUE)     
   x <- gsub("lakh",              ")*(100000)+(0", x , ignore.case = TRUE)
   # x <- gsub("das lakh",        ")*(1000000)+(0", x , ignore.case = TRUE)     
-  x <- gsub("karod",             ")*(100000000)+(0", x , ignore.case = TRUE)     
+  x <- gsub("karod",             ")*(10000000)+(0", x , ignore.case = TRUE)     
   x <- gsub("arba",              ")*(1000000000)+(0", x , ignore.case = TRUE)
-  x <- gsub("kharaba",            ")*(100000000000)+(0", x , ignore.case = TRUE)    
+  x <- gsub("kharaba",           ")*(100000000000)+(0", x , ignore.case = TRUE)    
   x <- gsub("nil",               ")*(10000000000000)+(0", x , ignore.case = TRUE)
   x <- gsub("padhna",            ")*(1000000000000000)+(0", x , ignore.case = TRUE)
   x <- gsub("shankha",           ")*(100000000000000000)+(0", x , ignore.case = TRUE)
@@ -152,6 +180,3 @@ nepalese_words_to_number <- function(x) {
     return(as.integer(eval(parse(text = x))))
   }
 }
-# 
-# x = "ek arba tin saya paanch"
-# nepalese_words_to_number(x)

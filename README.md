@@ -98,3 +98,10 @@ s <- "thTs Is a 'R Case Swap Function 2'."
 swap_case(s)
 "THtS iS A 'r cASE sWAP fUNCTION 2'."
 ```
+
+**`nepalese_words_to_number`**
+```r
+x = "ek karod paanch hajaar paanch saya paanch"
+nepalese_words_to_number(x)
+10005505
+```

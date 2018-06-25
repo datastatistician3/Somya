@@ -95,13 +95,28 @@ Somya::count_words_in_string(string = string, pattern = "[ ]", remove_punctuatio
 **`swap_case`**
 ```r
 s <- "thTs Is a 'R Case Swap Function 2'."
-swap_case(s)
+Somya::swap_case(s)
 "THtS iS A 'r cASE sWAP fUNCTION 2'."
 ```
 
 **`nepalese_words_to_number`**
 ```r
 x = "ek karod paanch hajaar paanch saya paanch"
-nepalese_words_to_number(x)
+Somya::nepalese_words_to_number(x)
 10005505
+```
+
+**`is_pangram`**
+```r
+string <- "The quick brown fox jumps over the lazy dog"
+Somya::is_pangram(string)
+TRUE
+
+x <- "Back in June we delivered oxygen equipement of the same size"
+Somya::is_pangram(x)
+TRUE
+
+y <- "Back in June we delivered oxygen equipement."
+Somya::is_pangram(y)
+FALSE
 ```

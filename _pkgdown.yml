@@ -26,6 +26,7 @@ reference:
   - count_words_in_string
   - swap_case
   - nepalese_words_to_number
+  - is_pangram
 
 navbar:
   type: default

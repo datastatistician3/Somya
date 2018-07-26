@@ -19,7 +19,7 @@ is a sentence constructed using all the letters of the alphabet.
 \examples{
 
 string = "The quick brown fox jumps over the lazy dog"
-x = "Back in June we delivered oxygen equipement of the same size"
+x = "Back in June we delivered oxygen equipment of the same size"
 
 is_pangram(string)
 is_pangram(x)

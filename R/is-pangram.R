@@ -16,7 +16,7 @@
 #' @examples
 #' 
 #' string = "The quick brown fox jumps over the lazy dog"
-#' x = "Back in June we delivered oxygen equipement of the same size"
+#' x = "Back in June we delivered oxygen equipment of the same size"
 #' 
 #'is_pangram(string)
 #'is_pangram(x)
@@ -29,7 +29,8 @@ is_pangram <- function(str){
   #Remove punctuation characters (! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [  ] ^ _ ` { | } ~)
   s <- gsub("[[:punct:]]","", s,ignore.case = TRUE)
   
-  s <- substring(s, seq(1,nchar(s),1), seq(1,nchar(s),1))
+  # s <- substring(s, seq(1,nchar(s),1), seq(1,nchar(s),1))
+  s <- unlist(strsplit(s, ""))
   
   result <- sum(base::letters %in% s) == length(base::letters)
   

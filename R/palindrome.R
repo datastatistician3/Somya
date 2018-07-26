@@ -24,7 +24,8 @@ is_palindrome <- function(str) {
   #Remove punctuation characters (! " # $ % & ' ( ) * + , - . / : ; < = > ? @ [  ] ^ _ ` { | } ~)
   s <- gsub("[[:punct:]]","", s,ignore.case = TRUE)
   
-  s <- substring(s, seq(1,nchar(s),1), seq(1,nchar(s),1))
+  # s <- substring(s, seq(1,nchar(s),1), seq(1,nchar(s),1))
+  s <- unlist(strsplit(s, ""))
 
   # #Check for any punctuation characters
   # invalid_chars <- grepl("[[:punct:]]", s, ignore.case = T)

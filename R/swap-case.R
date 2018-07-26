@@ -18,7 +18,8 @@
 #'swap_case(s)
 
 swap_case <- function(string){
-  x <- base::substring(string, base::seq(1,base::nchar(string),1), base::seq(1,base::nchar(string),1))
+  x <- unlist(strsplit(string, ""))
+  # x <- base::substring(string, base::seq(1,base::nchar(string),1), base::seq(1,base::nchar(string),1))
   
   lst = base::list()
   

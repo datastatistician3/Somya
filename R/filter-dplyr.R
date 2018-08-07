@@ -13,3 +13,10 @@
 #mtcars[c(1,2,5,6),1] <- NA
 #
 #select_filter_nonmissing(mtcars, "mpg", "vs", "am")
+
+# library(magrittr)
+# f2 <- function (d, variables_to_select, variable_required){
+#   d %>%
+#     dplyr::select(!!variables_to_select) %>%
+#     tidyr::drop_na(!!variable_required)
+# }
